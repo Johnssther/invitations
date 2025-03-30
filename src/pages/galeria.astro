@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <section class="mt-8 bg-white rounded-lg w-full p-3 flex flex-col gap-4 justify-center items-center">
+        <h1 class="text-3xl sm:text-3xl font-semibold text-gray-800 text-center tracking-wider">
+            Próximamente agregaremos fotos
+        </h1>
+    </section>
+    <section class="mt-8 bg-white rounded-lg w-full p-3 flex flex-col gap-4 justify-center items-center">
+        <h1 class="text-3xl sm:text-3xl font-semibold text-gray-800 text-center tracking-wider">
+            Ef 5:21, Col 3:18
+        </h1>
+    </section>
+
+    <section class="w-full h-full bg-gradient-to-r from-pink-400 via-pink-500 to-purple-600 p-12 relative overflow-hidden text-center rounded-lg">
+        <h2 class="text-3xl sm:text-4xl font-semibold text-white mb-6">¡La cuenta regresiva ha comenzado!</h2>
+    
+        <div class="countdown-timer w-full flex flex-row">
+            <p class="text-white" id="countdown" class="mt-4"></p>
+            <div>
+                <p class="text-white font-mono text-xl">132</p>
+                <p class="text-white">DIAS</p>
+            </div>
+            <div>
+                <p class="text-white font-mono text-xl">132</p>
+                <p class="text-white">DIAS</p>
+            </div>
+            <!-- <p class="mt-4" style="font-size: 10px;"> DIAS    HORAS      MINUTOS   SEGUNDOS</p> -->
+        </div>
+    
+        <script>
+            // Fecha objetivo (9 de agosto de 2025 a las 10 AM)
+            const targetDate = new Date('2025-08-09T10:00:00');
+    
+            // Actualizar la cuenta regresiva cada segundo
+            const countdownElement = document.getElementById('countdown');
+            
+            function updateCountdown() {
+                const currentDate = new Date();
+                const timeDifference = targetDate - currentDate;
+    
+                if (timeDifference <= 0) {
+                    countdownElement.innerHTML = '¡El gran día ha llegado!';
+                    clearInterval(countdownInterval); // Detener el contador cuando llegue la fecha
+                    return;
+                }
+    
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+                countdownElement.innerHTML = `
+                    ${days} :  ${hours} : ${minutes} : ${seconds}
+                `;
+            }
+    
+            // Llamar a la función al inicio
+            updateCountdown();
+    
+            // Actualizar la cuenta regresiva cada segundo
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        </script>
+    </section>
+    
+    <style>
+        .countdown-timer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+
+    <section class="mt-8 bg-white rounded-lg w-full p-3 flex flex-col gap-4 justify-center items-center">
+        <h1 class="text-3xl sm:text-3xl font-semibold text-gray-800 text-center tracking-wider">
+            Conéctate a nuestra transmisión virtual
+        </h1>
+        <p class="text-base sm:text-lg text-gray-700 mt-3">
+            Si no puedes asistir en persona, únete a nosotros a través de nuestra transmisión en vivo.
+        </p>
+        <a 
+            href="https://example.com/transmision" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="text-lg sm:text-xl font-medium text-blue-600 hover:underline mt-4"
+        >
+            Haz clic aquí para unirte a la transmisión
+        </a>
+    </section>
+
+    <section class="mt-8 bg-white rounded-lg w-full p-3 flex flex-col gap-4 justify-center items-center">
+        <h1 class="text-3xl sm:text-3xl font-semibold text-gray-800 text-center tracking-wider">
+            ¡Nos vemos pronto!
+        </h1>
+        <p class="text-base sm:text-lg text-gray-700 mt-3">
+            ¡Estamos emocionados de compartir este día tan especial contigo!
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 mt-2">
+            ¡No olvides marcarlo en tu calendario!
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 mt-2">
+            ¡Nos vemos pronto!
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 mt-2">
+            Con amor, Stefa y John
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 mt-2">
+            <strong class="font-medium text-gray-900">Teléfono:</strong> 3124224944
+        </p>    
+    </section>
+    
+</Layout>

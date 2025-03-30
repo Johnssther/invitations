@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <div class="w-screen flex justify-center items-center">
+        <div class="text-center bg-white text-white flex flex-col gap-2 w-full h-full lg:w-1/4">
+            
+            <section class="w-full h-screen bg-gradient-to-r from-pink-400 via-pink-500 to-purple-600 p-12 relative overflow-hidden text-center flex flex-col justify-center items-center">
+                <!-- Efecto de fondo con parallax mejorado -->
+                <div class="absolute inset-0 bg-black opacity-40 z-0 transform transition duration-300 ease-in-out will-change-transform" data-parallax="true"></div>
+                
+                <!-- Contenido de la sección -->
+                <div class="relative z-10 animate__animated animate__fadeIn animate__delay-1s">
+                    <h1 class="name text-6xl sm:text-7xl font-extrabold text-white tracking-widest leading-tight drop-shadow-lg animate__animated animate__fadeIn animate__delay-1s"
+                    >
+                        ¡Stefa & John!
+                    </h1>
+                    <p class="mt-6 text-lg sm:text-2xl text-white font-light leading-relaxed drop-shadow-md animate__animated animate__fadeIn animate__delay-2s">
+                        Con mucha alegría, te invitamos a celebrar nuestra boda en este día tan especial. Será un evento único, ¡no faltes!
+                    </p>
+                
+                    <!-- Botón con animación y color oro -->
+                    <div class="mt-8">
+                        <span class="inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-white py-3 px-8 rounded-full text-md font-semibold tracking-widest cursor-pointer transform transition duration-300 hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 hover:text-gray-800 shadow-xl hover:shadow-2xl animate__animated animate__fadeIn animate__delay-3s">
+                            ¡Te esperamos con emoción!
+                        </span>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!-- Sección de detalles del evento -->
+            <section class="mt-8 bg-white rounded-lg w-full h-full p-3 flex flex-col gap-4 justify-center items-center">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">
+                    Detalles del Evento
+                </h2>
+                <p class="text-base sm:text-lg text-gray-700 mt-3">
+                    <strong class="font-medium text-gray-900">Fecha:</strong> 9 de
+                    agosto de 2025, 9:00 AM
+                </p>
+                <p class="text-base sm:text-lg text-gray-700 mt-2">
+                    <strong class="font-medium text-gray-900">Lugar:</strong> Cajicá,
+                    Nombre del Lugar
+                </p>
+                <p class="text-base sm:text-lg text-gray-700 mt-2">
+                    <strong class="font-medium text-gray-900">Hora:</strong> 9:00
+                    AM
+                </p>
+            </section>
+
+            <section class="mt-6 w-full h-screen">
+                <img
+                    class="w-full h-full sm:h-64 object-cover"
+                    src="./foto.jpg"
+                    alt="Pareja celebrando"
+                />
+            </section>
+
+            <section class="mt-6 w-full h-full p-3">
+                <p class="mt-6 text-gray-700 ">
+                    Queremos compartir este día tan especial contigo. No olvides
+                    confirmar tu asistencia.
+                </p>
+                <a
+                    href="https://wa.me/573124224944?text=Confirmo%20mi%20asistencia"
+                    class="mt-4 inline-block bg-pink-500 text-white py-3 px-8 rounded-lg shadow-md text-base sm:text-lg font-semibold hover:bg-pink-600 transition"
+                    target="_blank"
+                >
+                    Confirmar Asistencia
+                </a>
+            </section>
+
+            <section class="mt-8 w-full h-screen p-3">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">
+                    Ubicación
+                </h2>
+                <p class="mt-2 text-base text-gray-600">
+                    Encuentra nuestra ubicación en el mapa interactivo a
+                    continuación:
+                </p>
+                <div
+                    class="mt-4 w-full h-full sm:h-80 rounded-lg shadow-lg overflow-hidden"
+                >
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d993.81693260759!2d-74.03334838710246!3d4.894783030874581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4079df680a4df7%3A0x7cc08a34c3c69d6d!2sHacienda%20PACO!5e0!3m2!1ses-419!2sco!4v1743273021926!5m2!1ses-419!2sco"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full h-full"></iframe>
+                </div>
+            </section>
+        </div>
+    </div>
+</Layout>

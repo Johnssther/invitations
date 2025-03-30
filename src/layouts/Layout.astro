@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<script>
+			import "../styles/global.css";
+		</script>
+
+
+		<!-- Conexión a Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+
+		<title>Invitación de Boda</title>
+	</head>
+	<body>
+		<header>
+			<div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem;">
+				<div class="logo text-pink-700" style="font-family: 'Sacramento', cursive; font-size: 2rem; font-weight: bold;">
+					Stefa & John
+				</div>
+				<nav>
+					<ul style="list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0;">
+						<li><a href="/boda" style="text-decoration: none; font-family: 'Quicksand', sans-serif;">Boda</a></li>
+						<li><a href="/galeria" style="text-decoration: none; font-family: 'Quicksand', sans-serif;">Galeria</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+	h1 {
+		font-family: 'Sacramento', cursive;
+	}
+
+</style>
